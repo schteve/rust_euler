@@ -3,10 +3,10 @@
 // Find the sum of all the multiples of 3 or 5 below 1000.
 
 // Just test each number to see if it's a multiple
-fn naive(max: u32) -> u32 {
-    let mut sum = 0;
+fn naive(max: u32) -> u64 {
+    let mut sum: u64 = 0;
 
-    for x in 1..max {
+    for x in 1..max as u64 {
         if (x % 3 == 0) || (x % 5 == 0) {
             sum += x;
         }
@@ -16,16 +16,16 @@ fn naive(max: u32) -> u32 {
 }
 
 // Don't test each number, instead do each multiple of 3 then each multiple of 5 (skipping multiples of 3)
-fn optimized_1(max: u32) -> u32 {
-    let mut sum = 0;
+fn optimized_1(max: u32) -> u64 {
+    let mut sum: u64 = 0;
 
-    for x in (3..max).step_by(3) {
+    for x in (3..max as u64).step_by(3) {
         sum += x;
     }
 
     // Starting with 5, every 3rd number should be skipped
     let mut i = 0;
-    for x in (5..max).step_by(5) {
+    for x in (5..max as u64).step_by(5) {
         if i < 2 {
             sum += x;
             i += 1;
@@ -40,6 +40,15 @@ fn optimized_1(max: u32) -> u32 {
 pub fn solve() {
     println!("Naive: {}", naive(1000));
     println!("Optimized 1: {}", optimized_1(1000));
+
+    // Fun fact: if you keep adding 0's to the end of the parameter the sum grows like this:
+    // - 233168
+    // - 23331668
+    // - 2333316668
+    // - 233333166668
+    // etc
+    // println!("Naive: {}", naive(100000000));
+    // println!("Optimized 1: {}", optimized_1(100000000));
 }
 
 #[cfg(test)]
