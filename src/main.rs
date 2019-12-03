@@ -1,3 +1,6 @@
+
+mod problem_001;
+
 fn main() {
-    println!("Hello, world!");
+    problem_001::solve();
 }
