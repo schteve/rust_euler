@@ -48,24 +48,26 @@ pub fn solve() {
 
 #[cfg(test)]
 mod test {
+    use super::*;
+
     #[test]
     fn test_example() {
-        assert_eq!(super::naive(4), 9);
-        assert_eq!(super::naive(100), 9009);
+        assert_eq!(naive(4), 9);
+        assert_eq!(naive(100), 9009);
     }
 
     #[test]
     fn test_answer() {
-        assert_eq!(super::naive(999), 906609);
+        assert_eq!(naive(999), 906609);
     }
 
     #[test]
     fn test_palindrome() {
-        assert_eq!(super::is_palindrome(1), true);
-        assert_eq!(super::is_palindrome(11), true);
-        assert_eq!(super::is_palindrome(12), false);
-        assert_eq!(super::is_palindrome(111), true);
-        assert_eq!(super::is_palindrome(123), false);
-        assert_eq!(super::is_palindrome(1234554321), true);
+        assert_eq!(is_palindrome(1), true);
+        assert_eq!(is_palindrome(11), true);
+        assert_eq!(is_palindrome(12), false);
+        assert_eq!(is_palindrome(111), true);
+        assert_eq!(is_palindrome(123), false);
+        assert_eq!(is_palindrome(1234554321), true);
     }
 }

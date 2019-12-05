@@ -28,15 +28,17 @@ pub fn solve() {
 
 #[cfg(test)]
 mod test {
+    use super::*;
+
     #[test]
     fn test_example() {
-        assert_eq!(super::naive(11), 11);
-        assert_eq!(super::naive(15), 5);
-        assert_eq!(super::naive(13195), 29);
+        assert_eq!(naive(11), 11);
+        assert_eq!(naive(15), 5);
+        assert_eq!(naive(13195), 29);
     }
 
     #[test]
     fn test_answer() {
-        assert_eq!(super::naive(600851475143), 6857);
+        assert_eq!(naive(600851475143), 6857);
     }
 }

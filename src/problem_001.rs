@@ -53,15 +53,17 @@ pub fn solve() {
 
 #[cfg(test)]
 mod test {
+    use super::*;
+
     #[test]
     fn test_example() {
-        assert_eq!(super::naive(10), 23);
-        assert_eq!(super::optimized_1(10), 23);
+        assert_eq!(naive(10), 23);
+        assert_eq!(optimized_1(10), 23);
     }
 
     #[test]
     fn test_answer() {
-        assert_eq!(super::naive(1000), 233168);
-        assert_eq!(super::optimized_1(1000), 233168);
+        assert_eq!(naive(1000), 233168);
+        assert_eq!(optimized_1(1000), 233168);
     }
 }

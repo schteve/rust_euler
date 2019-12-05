@@ -50,34 +50,36 @@ pub fn solve() {
 
 #[cfg(test)]
 mod test {
+    use super::*;
+
     #[test]
     fn test_example() {
-        assert_eq!(super::naive(1), 0);
-        assert_eq!(super::naive(2), 2);
-        assert_eq!(super::naive(3), 2);
-        assert_eq!(super::naive(5), 2);
-        assert_eq!(super::naive(8), 10);
-        assert_eq!(super::naive(13), 10);
-        assert_eq!(super::naive(21), 10);
-        assert_eq!(super::naive(34), 44);
-        assert_eq!(super::naive(55), 44);
-        assert_eq!(super::naive(89), 44);
+        assert_eq!(naive(1), 0);
+        assert_eq!(naive(2), 2);
+        assert_eq!(naive(3), 2);
+        assert_eq!(naive(5), 2);
+        assert_eq!(naive(8), 10);
+        assert_eq!(naive(13), 10);
+        assert_eq!(naive(21), 10);
+        assert_eq!(naive(34), 44);
+        assert_eq!(naive(55), 44);
+        assert_eq!(naive(89), 44);
 
-        assert_eq!(super::optimized_1(1), 0);
-        assert_eq!(super::optimized_1(2), 2);
-        assert_eq!(super::optimized_1(3), 2);
-        assert_eq!(super::optimized_1(5), 2);
-        assert_eq!(super::optimized_1(8), 10);
-        assert_eq!(super::optimized_1(13), 10);
-        assert_eq!(super::optimized_1(21), 10);
-        assert_eq!(super::optimized_1(34), 44);
-        assert_eq!(super::optimized_1(55), 44);
-        assert_eq!(super::optimized_1(89), 44);
+        assert_eq!(optimized_1(1), 0);
+        assert_eq!(optimized_1(2), 2);
+        assert_eq!(optimized_1(3), 2);
+        assert_eq!(optimized_1(5), 2);
+        assert_eq!(optimized_1(8), 10);
+        assert_eq!(optimized_1(13), 10);
+        assert_eq!(optimized_1(21), 10);
+        assert_eq!(optimized_1(34), 44);
+        assert_eq!(optimized_1(55), 44);
+        assert_eq!(optimized_1(89), 44);
     }
 
     #[test]
     fn test_answer() {
-        assert_eq!(super::naive(4000000), 4613732);
-        assert_eq!(super::optimized_1(4000000), 4613732);
+        assert_eq!(naive(4000000), 4613732);
+        assert_eq!(optimized_1(4000000), 4613732);
     }
 }
