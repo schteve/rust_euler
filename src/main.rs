@@ -1,6 +1,6 @@
 
-mod problem_007;
+mod problem_008;
 
 fn main() {
-    problem_007::solve();
+    problem_008::solve();
 }
